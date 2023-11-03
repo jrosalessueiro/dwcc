@@ -2,17 +2,18 @@
 // a partir de ahí cada elemento es la suma de los dos anteriores.
 
 
-let i: number = 0;
-let j: number = 1;
-let k: number = 3;
+var i: number = 0;
+var j: number = 1;
+var k: number = 3;
+
 console.log("SERIE DE FIBONACCI" + "\n");
 
 console.log("El elemento 1 de la serie de Fibonacci es: 0");
 console.log("El elemento 2 de la serie de Fibonacci es: 1");
 
-while( k <= 10 ) {
-    
-    let resultado: number = i + j;
+while (k <= 10) {
+
+    var resultado: number = i + j;
 
     console.log("El elemento " + k + " de la serie de Fibonacci es: " + resultado);
     k++;
