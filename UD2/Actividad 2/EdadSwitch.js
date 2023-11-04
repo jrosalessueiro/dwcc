@@ -1,5 +1,10 @@
 const Etapa = (numero) => {
     let etapa = "";
+
+    if (numero < 0 || numero > 100) {
+        return "Error. El número introducido no es correcto. Debe estar entre 0 y 100";
+    }
+
     switch (true) {
         case numero <= 12:
             etapa = "Niño/a";
@@ -17,7 +22,7 @@ const Etapa = (numero) => {
             etapa = "Jubilado/a";
             break;
         default:
-            alert("No has introducido un valor adecuado.")
+            return ("Error. El número introducido no es correcto. Debe estar entre 0 y 100")
     }
 
     return etapa;

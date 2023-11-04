@@ -1,6 +1,10 @@
 const Etapa = (numero) => {
     let etapa = "";
 
+    if (numero < 0 || numero > 100) {
+        return "Error. El número introducido no es correcto. Debe estar entre 0 y 100";
+    }
+
     if (numero >= 0 && numero <= 10) {
         etapa = "Niño/a";
     } else if (numero <= 18) {
