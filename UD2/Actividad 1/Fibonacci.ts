@@ -1,7 +1,7 @@
 //La sucesión de Fibonacci se caracteriza porque el primer número es 0, el segundo es 1 y
 // a partir de ahí cada elemento es la suma de los dos anteriores.
 
-const Fibonacci = (event: Event) => {
+const fibonacci = (event: Event) => {
     event.preventDefault();
     let i: number = 0;
     let j: number = 1;
