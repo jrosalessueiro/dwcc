@@ -8,7 +8,7 @@
 
 <body>
     <h1>Actividad 2 - Tarea 2 de DWEC - Edad</h1>
-    <form onsubmit="Edad(event)">
+    <form onsubmit="edad(event)">
         <label for="numero">
             <h2>Introduce tu edad (años):</h2>
         </label>
@@ -20,7 +20,7 @@
     <script src="E:\VisualCodeStudio\Practicas\dwec\UD2\Actividad 2\EdadSwitch.js"></script>
 
     <script>
-        const Edad = (event) => {
+        const edad = (event) => {
             event.preventDefault();
             const numero = parseInt(document.getElementById('numero').value);
 

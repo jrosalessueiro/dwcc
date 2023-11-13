@@ -10,19 +10,19 @@ const Fibonacci = (event: Event) => {
     let sucesion = document.getElementById('sucesion');
     if (sucesion != null) {
 
-        let SucecionFibonacci: string = '<h2>Suceción de Fibonacci</h2>';
-        SucecionFibonacci += '<ul>';
-        SucecionFibonacci += `<li>El elemento 1 de la serie de Fibonacci es: 0</li>`;
-        SucecionFibonacci += `<li>El elemento 2 de la serie de Fibonacci es: 1</li>`;
+        let sucecionFibonacci: string = '<h2>Suceción de Fibonacci</h2>';
+        sucecionFibonacci += '<ul>';
+        sucecionFibonacci += `<li>El elemento 1 de la serie de Fibonacci es: 0</li>`;
+        sucecionFibonacci += `<li>El elemento 2 de la serie de Fibonacci es: 1</li>`;
         while (k <= 10) {
             let resultado: number = i + j;
-            SucecionFibonacci += `<li>El elemento  ${k}  de la serie de Fibonacci es:  ${resultado}</li>`;
+            sucecionFibonacci += `<li>El elemento  ${k}  de la serie de Fibonacci es:  ${resultado}</li>`;
             k++;
             i = j;
             j = resultado;
         }
-        SucecionFibonacci += '</ul>';
-        sucesion.innerHTML = SucecionFibonacci;
+        sucecionFibonacci += '</ul>';
+        sucesion.innerHTML = sucecionFibonacci;
     } else {
         alert("Elemento 'sucesion' no encontrado en el documento.");
     }

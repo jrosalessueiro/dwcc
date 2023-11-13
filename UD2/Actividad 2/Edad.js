@@ -1,4 +1,4 @@
-const Etapa = (numero) => {
+const etapa = (numero) => {
     let etapa = "";
 
     if (numero < 0 || numero > 100) {

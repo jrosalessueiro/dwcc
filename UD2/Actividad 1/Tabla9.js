@@ -1,6 +1,6 @@
 //Este programa va a mostrar la tabla del 9
 
-const Tabla9 = (event) => {
+const tabla9 = (event) => {
     event.preventDefault();
     let numero = 9;
    

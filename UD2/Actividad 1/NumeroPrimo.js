@@ -1,6 +1,6 @@
 //Este programa indicará si un número introducido en primo o no
 
-const ComprobarPrimo = (numero) => {
+const comprobarPrimo = (numero) => {
 
     if (numero <= 1) {
         return false;
