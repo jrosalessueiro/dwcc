@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de objeto Window</title>
+
+</head>
+
+<body>
+    <h1>Da usted su consentimiento para abrir una nueva ventana?</h1>
+    <button onclick="permiso()">Consiento</button>
+    <button onclick="">No Consiento</button>
+    <script type="text/javascript">
+        let nuevaVentana;
+        function permiso() {
+            const url = 'file:///E:/VisualCodeStudio/Practicas/dwec/UD3/Window/newWindow.html';
+            nuevaVentana = window.open(url, 'windowUD3T1', "width=300,height=300,Toolbar=NO,Top=400,Left=400");
+        }
+        function noConsiento() {
+            if (newWindow) {
+                newWindow.close();
+            }
+        }
+    </script>
+
+    <h1></h1>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva ventana</title>
+</head>
+
+<body>
+    <h3>Exemplo de ventá nova</h3>
+    <script>
+        // Abre una nueva ventana
+        const newWindow = window.open('', 'NuevaVentana', 'width=600,height=400');
+
+        // Verifica si la ventana se abrió correctamente
+        if (newWindow) {
+            const contenido =
+                `<p>URL:  ${window.location.href} </p>` +
+                `<p>Protocolo:  ${window.location.protocol} </p>` +
+                `<p>Navegador:  ${navigator.userAgent} </p>`;
+
+            // Asigna el contenido a la nueva ventana
+            newWindow.document.body.innerHTML = contenido;
+        } else {
+            alert('No se pudo abrir la nueva ventana. Asegúrate de que tu navegador permite ventanas emergentes.');
+        }
+    </script>
+
+
+</body>
+
+</html>
