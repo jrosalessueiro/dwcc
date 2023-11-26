@@ -4,45 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cumpleaños en fin de semana</title>
+    <title>Frcha en diferentes formatos</title>
 </head>
 
 <body>
-    <h3>Introduce el día y el mes de tu cumpleaños</h3>
-    <form id="aniversario" name="aniversario" method="post" action="">
-        <label for="dia">Día: </label>
-        <select id="day" name="day" required>
-            <!--Creamos el select para los días-->
-            <script> for (let x = 1; x <= 31; x++) {
-                    document.write("<option>" + parseInt(x) + "</option>")
-                }              
-            </script>
+    <h3>Elije el formato qn que quieras ver la fecha actual</h3>
 
+        <select id="fecha" onchange="mensaje()" required>
+            <option value="1">dd/mm/aaaa</option>
+            <option value="2">Completa en español</option>
+            <option value="3">Completa en inglés</option>
         </select>
 
-        <label for="mes">Mes: </label>
-        <!--Creamos el select para los meses-->
-        <select id="month" name="month" required>
-
-            <option value="1">Enero</option>
-            <option value="2">Febrero</option>
-            <option value="3">Marzo</option>
-            <option value="4">Abril</option>
-            <option value="5">Mayo</option>
-            <option value="6">Junio</option>
-            <option value="7">Julio</option>
-            <option value="8">Agosto</option>
-            <option value="9">Septiembre</option>
-            <option value="10">Octubre</option>
-            <option value="11">Noviembre</option>
-            <option value="12">Diciembre</option>
-
-        </select>
-
-    </form><br><br>
     <button onclick="calcularCumpleFinSemana(dia,mes)">Mostrar</button><br><br>
     <button onclick="cerrarVentana()">Cerrar</button>
-    <p id="resultado"></p>
+    
+    <p id="mensaje"></p>
 
     <script>
         function calcularCumpleFinSemana() {
