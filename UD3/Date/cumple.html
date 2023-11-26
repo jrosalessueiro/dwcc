@@ -40,7 +40,7 @@
         </select>
 
     </form><br><br>
-    <button onclick="calcularCumpleFinSemana(dia,mes)">Mostrar</button><br><br>
+    <button onclick="calcularCumpleFinSemana()">Mostrar</button><br><br>
     <button onclick="cerrarVentana()">Cerrar</button>
     <p id="resultado"></p>
 
@@ -57,7 +57,7 @@
             let resultado = [];
 
             for (let anio = fecha.getFullYear(); anio <= 2100; anio++) {
-                cumple.getFullYear(anio);
+                cumple = new Date(anio,mes-1,dia);
 
                 if(cumple.getDay() === 6 || cumple.getDay() === 0) {  // El día 6 es el sábado y el 0 es el Domingo
                     resultado.push(anio);

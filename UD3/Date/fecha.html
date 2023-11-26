@@ -16,15 +16,30 @@
             <option value="3">Completa en inglés</option>
         </select>
 
-    <button onclick="calcularCumpleFinSemana(dia,mes)">Mostrar</button><br><br>
+    <button onclick="mostrarFecha()">Mostrar</button><br><br>
     <button onclick="cerrarVentana()">Cerrar</button>
-    
+
     <p id="mensaje"></p>
 
     <script>
-        function calcularCumpleFinSemana() {
+        function mostrarFecha() {
 
-            //Obtenemos el mes y el día introducidos por el usuario
+            let eleccion = document.getElementById("fecha").value;
+            let date = new Date();
+
+            switch (eleccion) {
+                case "dd/mm/aaaa":
+                    mensaje = "La fecha actual es: " + date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear;
+                    break;
+                case "Completa en español":
+                mensaje = "La fecha actual es: " + date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear;
+                    break;
+                case "Completa en inglés":
+                mensaje = "La fecha actual es: " + date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear;
+                    break;
+                default:
+                    mensaje = "Seleccione una opción válida.";
+            }
             const dia = parseInt(document.getElementById("day").value);
             const mes = parseInt(document.getElementById("month").value);
 
