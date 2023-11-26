@@ -23,43 +23,15 @@ function finCurso() {
 }
 
 function finSemana() {
-    // Comprueba si la ventana está abierta
-    if (ventanaRemota && !ventanaRemota.closed) {
-        // Obtiene la posición actual de la ventana remota
-        let posX = ventanaRemota.screenX + 50;
-        let posY = ventanaRemota.screenY + 50;
-
-        // Mueve la ventana a una nueva posición
-        ventanaRemota.moveTo(posX, posY);
-
-        // Enfoca la ventana remota
-        ventanaRemota.focus();
-    } else {
-        alert("La ventana remota está cerrada.");
-    }
+    ventanaRemota = window.open("cumple.html", "", "width=500, height=500, top=400, left=400, toolbar=no, menubar=no");
 }
 
 function fechaActual() {
-    // Comprueba si la ventana está abierta
-    if (ventanaRemota && !ventanaRemota.closed) {
-        // Redimensiona la ventana a 500x500
-        ventanaRemota.resizeTo(500, 500);
-
-        // Enfoca la ventana remota
-        ventanaRemota.focus();
-    } else {
-        alert("La ventana remota está cerrada.");
-    }
+    
 }
 
 function horaActual() {
-    // Comprueba si la ventana está abierta
-    if (ventanaRemota && !ventanaRemota.closed) {
-        // Cierra la ventana remota
-        ventanaRemota.close();
-    } else {
-        alert("La ventana remota ya está cerrada.");
-    }
+    
 }
 </script>
 
