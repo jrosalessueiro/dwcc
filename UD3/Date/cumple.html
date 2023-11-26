@@ -45,7 +45,7 @@
     <p id="resultado"></p>
 
     <script>
-        function calcularCumpleFinSemana(dia, mes) {
+        function calcularCumpleFinSemana() {
 
             //Obtenemos el mes y el día introducidos por el usuario
             const dia = parseInt(document.getElementById("day").value);
@@ -57,9 +57,9 @@
             let resultado = [];
 
             for (let anio = fecha.getFullYear(); anio <= 2100; anio++) {
-                const cumple = new Date(anio, mes - 1, dia);
+                cumple.getFullYear(anio);
 
-                If(cumple.getDay() === 6 || cumple.getDay() === 0) {  // El día 6 es el sábado y el 0 es el Domingo
+                if(cumple.getDay() === 6 || cumple.getDay() === 0) {  // El día 6 es el sábado y el 0 es el Domingo
                     resultado.push(anio);
                 }
             }
