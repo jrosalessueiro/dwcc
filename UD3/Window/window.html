@@ -19,7 +19,7 @@ function abrirVentana() {
     // Pide permiso al usuario
     if (confirm("¿Quieres abrir la ventana?")) {
         // Abre la nueva ventana con las propiedades especificadas
-        ventanaRemota = window.open("E:\VisualCodeStudio\Practicas\dwec\UD3\Window\ventana.html", "", "width=300, height=300, top=400, left=400, toolbar=no, menubar=no, alwaysRaised=yes");
+        ventanaRemota = window.open("ventana.html", "", "width=300, height=300, top=400, left=400, toolbar=no, menubar=no, alwaysRaised=yes");
         // Comprueba si la ventana se abrió correctamente
         if (!ventanaRemota) {
             alert("No se pudo abrir la ventana. Por favor, permite las ventanas emergentes.");
