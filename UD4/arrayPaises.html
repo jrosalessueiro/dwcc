@@ -7,7 +7,7 @@
     <title>Array de paises</title>
 </head>
 
-<body>
+<body onload="crearArray()">
     <h3>Tarea 4 de DWEC - Trabajo con arrays</h3>
     <h3>Estamos trabajando con un array de paises que contiene:</h3>
 
@@ -18,7 +18,7 @@
         <li>Costa Rica</li>
         <li>Panamá</li>
         <li>Uruguay</li>
-        <li>Europa</li>
+        <li>Kenia</li>
         <li>España</li>
         <li>Alemania</li>
         <li>Francia</li>
@@ -28,7 +28,7 @@
         <li>Portugal</li>
         <li>Suecia</li>
         <li>Noruega</li>
-        <li>Asia</li>
+        <li>Egipto</li>
         <li>China</li>
         <li>India</li>
         <li>Japón</li>
@@ -78,7 +78,7 @@
                 arrayPaises.push(elemento.innerHTML);
             }
         }
-        
+
         function contarElementos() {
             let numero = arrayPaises.length;
             document.getElementById("resultado1").innerText = "El array tiene: " + numero + " elementos.";
@@ -93,12 +93,8 @@
         function mostrarInverso() {
             // Crear una copia del array y luego invertirlo
             let arrayPaisesInvertido = arrayPaises.slice().reverse();
+            let contenido = arrayPaisesInvertido.join(', ');
 
-            // Mostrar en el HTML
-            let contenido = "";
-            arrayPaisesInvertido.forEach(function (elemento) {
-                contenido += elemento + '<br>';
-            });
             document.getElementById("resultado3").innerText = "Los países contenidos en el array de último a primero son: " + contenido;
         }
 
@@ -131,40 +127,46 @@
         }
 
         function eliminaInicio() {
-            document.getElementById("resultado6").innerText = "El pais eliminado en la primera posición es: " + arrayPaises[0].value;
+            if (arrayPaises.length > 0) {
+                let elementoEliminado = arrayPaises.shift();
 
-            // Eliminar el elemento en la posición 1 (índice 0)
-            arrayPaises.splice(1, 0);
+                // Mostrar el elemento eliminado en el HTML
+                document.getElementById("resultado6").innerText = "El país eliminado en la primera posición es: " + elementoEliminado;
+            } else {
+                // Mostrar un mensaje si el array está vacío
+                document.getElementById("resultado6").innerText = "El array está vacío, no se puede eliminar ningún elemento.";
+            }
         }
 
         function eliminaFin() {
-            let numero = arrayPaises.length;
-            document.getElementById("resultado7").innerText = "El pais eliminado en la ultima posición es: " + arrayPaises[numero].value;
+            if (arrayPaises.length > 0) {
+                let elementoEliminado = arrayPaises.pop();
 
-            // Eliminar el elemento en la última posición
-            arrayPaises.splice(1, numero - 1);
+                // Mostrar el elemento eliminado en el HTML
+                document.getElementById("resultado7").innerText = "El país eliminado en la primera posición es: " + elementoEliminado;
+            } else {
+                // Mostrar un mensaje si el array está vacío
+                document.getElementById("resultado7").innerText = "El array está vacío, no se puede eliminar ningún elemento.";
+            }
         }
 
         function encuentraPais() {
             // Solicitar al usuario que introduzca una posición
             let posicion = prompt("Introduce la posición que ocupa el pais que desea mostrar:");
-            document.getElementById("resultado8").innerText = "El pais seleccionado en la posición " + posicion + " es: " + arrayPaises[posicion - 1];
+            let posicionReal = posicion - 1;
+            document.getElementById("resultado8").innerText = "El pais seleccionado en la posición " + posicion + " es: " + arrayPaises[posicionReal];
         }
 
         function encuentraPosicion() {
-            let numero = arrayPaises.length;
-
             // Solicitar al usuario que introduzca un pais
             let pais = prompt("Introduce el pais del que desea conocer su posición:");
+            let posicion = 0;
 
             // Verificar si el usuario ingresó un pais
             if (pais !== null && pais !== "") {
                 if (arrayPaises.includes(pais)) {
-                    for (let i = 0; i <= numero; i++) {
-                        if (pais === arrayPaises[i]) {
-                            let posicion = i + 1;
-                        }
-                    }
+                    posicion = arrayPaises.indexOf(pais) + 1;
+                    document.getElementById("resultado9").innerText = "La posición que ocupa " + pais + " es: " + posicion;
                 } else {
                     // Mostrar un mensaje si el pais no se encuentra en el array
                     console.log("No se encuentra ese pais en el array.");
@@ -173,7 +175,6 @@
                 // Mostrar un mensaje si el usuario no ingresó un nombre
                 console.log("No se ingresó un pais.");
             }
-            document.getElementById("resultado9").innerText = "La posición que ocupa " + pais + " es: " + posicion;
         }
 
         function entrePosiciones() {
