@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ES-es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array de paises</title>
+</head>
+
+<body>
+    <h3>Tarea 4 de DWEC - Trabajo con arrays</h3>
+    <h3>Estamos trabajando con un array de paises que contiene:</h3>
+
+    <ul id="list">
+        <li>Ecuador</li>
+        <li>Cuba</li>
+        <li>Bolivia</li>
+        <li>Costa Rica</li>
+        <li>Panamá</li>
+        <li>Uruguay</li>
+        <li>Europa</li>
+        <li>España</li>
+        <li>Alemania</li>
+        <li>Francia</li>
+        <li>Italia</li>
+        <li>Reino Unido</li>
+        <li>Grecia</li>
+        <li>Portugal</li>
+        <li>Suecia</li>
+        <li>Noruega</li>
+        <li>Asia</li>
+        <li>China</li>
+        <li>India</li>
+        <li>Japón</li>
+        <li>Corea del Sur</li>
+        <li>Indonesia</li>
+        <li>Turquía</li>
+        <li>Filipinas</li>
+        <li>Tailandia</li>
+        <li>Vietnam</li>
+    </ul>
+
+    <form id="countries" name="paises" method="post" action="">
+        <label for="select">Elija una opción:</label><br><br>
+    </form>
+    <script>
+        crearArray();
+    </script>
+
+    <button onclick="contarElementos()">1. Mostrar el número de elementos en el array</button><br><br>
+    <button onclick="mostrarTodos()">2. Mostrar todos los países</button><br><br>
+    <button onclick="mostrarInverso()">3. Mostrar todos los países en sentido inverso</button><br><br>
+    <button onclick="sumaInicio()">4. Añade un pais al comienzo del array</button><br><br>
+    <button onclick="sumaFin()">5. Añade un pais al final del array</button><br><br>
+    <button onclick="eliminaInicio()">6. Elimina un pais al comienzo del array</button><br><br>
+    <button onclick="eliminsFin()">7. Elimina un pais al final del array</button><br><br>
+    <button onclick="encuentraPais()">8. Encuentra el pais que ocupa una posición concreta</button><br><br>
+    <button onclick="encuestraPosicion()">9. Encuentra la posición que ocupa un pais concreto</button><br><br>
+    <button onclick="entrePosiciones()">10. Indica los países que están entre dos posiciones concretas</button><br><br>
+
+    <p id="resultado1"></p>
+    <p id="resultado2"></p>
+    <p id="resultado3"></p>
+    <p id="resultado4"></p>
+    <p id="resultado5"></p>
+    <p id="resultado6"></p>
+    <p id="resultado7"></p>
+    <p id="resultado8"></p>
+    <p id="resultado9"></p>
+    <p id="resultado10"></p>
+
+    <script>
+        function crearArray() {
+            let arrayPaises = [];
+            let listaPaises = document.getElementById("list");
+
+            // Recorre los elementos de la lista
+            for (let i = 0; i < lista.children.length; i++) {
+                let elemento = listaPaises.children[i];
+                arrayPaises.push(elemento.innerHTML);
+            }
+
+            // Llama a la función para convertir la lista en un array
+            //let miArray = listaAArray();
+
+            // function contarElementos() {
+
+        }
+        function contarElementos() {
+            let numero = arrayPaises.length;
+            document.getElementById("resultado1").innerText = "El array tiene: " + numero + " elementos.";
+        }
+
+        function mostrarTodos() {
+
+            //for(let i=0;i<=numero;i++){
+
+            //}
+            let numero = arrayPaises.length;
+            document.getElementById("resultado1").innerText = "Los países contenidos en el array son: " + document.getElementById("list");
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
